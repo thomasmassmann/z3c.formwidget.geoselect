@@ -1,0 +1,28 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:z3c="http://namespaces.zope.org/z3c"
+    i18n_domain="z3c.formwidget.geoselect">
+
+  <class class=".widget.GeoSelectWidget">
+    <require
+        permission="zope.Public"
+        interface=".interfaces.IGeoSelectWidget"
+        />
+  </class>
+
+  <!-- This widget is not configured for any field by default. -->
+  <z3c:widgetTemplate
+      layer="z3c.form.interfaces.IFormLayer"
+      mode="display"
+      template="geoselect_display.pt"
+      widget=".interfaces.IGeoSelectWidget"
+      />
+
+  <z3c:widgetTemplate
+      layer="z3c.form.interfaces.IFormLayer"
+      mode="input"
+      template="geoselect_input.pt"
+      widget=".interfaces.IGeoSelectWidget"
+      />
+
+</configure>

@@ -1,0 +1,8 @@
+# use glob syntax.
+syntax: glob
+
+build/**
+dist/**
+z3c.formwidget.geoselect.egg-info/**
+
+
